@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package Model_Landmark_calculator;
+
+service Model_Landmark_Calculator {
+  
+  rpc Add (Model_Landmark_Input_img) returns (Model_Landmark_Output_img);
+}
+
+message Model_Landmark_Input_img{
+     bytes model_landmark_idata=1;
+}
+message Model_Landmark_Output_img{
+     string model_landmark_odata=1;
+}
