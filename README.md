@@ -60,7 +60,7 @@ sys.path.append(wanted_dir)
 * open another tmux session call it tmux_model2; then run: ```python3 ./model2/model_landmark_server.py```
 * open another tmux session call it tmux_aggregator; then run: ```python3 ./aggregator/server.py```
 * open another tmux session call it tmux_end_user_client; then run: ```python3 ./async.py```
-* Give the address of a images directory and be sure to have "/" at the end of the address.
+* Give the address of images directory and be sure to have "/" at the end of the address.
 
 
 ## Author
