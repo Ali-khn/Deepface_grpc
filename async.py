@@ -3,7 +3,7 @@ import glob
 import sys
 import asyncio
 from concurrent.futures import ProcessPoolExecutor
-sys.path.extend(["./model2","./model1_draft", "./aggregator"])
+sys.path.extend(["./model2","./model_1", "./aggregator"])
 from model2 import model_landmark_client as modelsecond_cli
 from model_1 import model_landmark_client as modelfirst_cli
 
@@ -17,7 +17,7 @@ def age_gender_model(end_user_idata_path_):
     modelfirst_cli.run(end_user_idata_path_)
 
 if __name__ == "__main__":
-    # Client Server 1
+    # End user client
     end_user_idata_path = input("Please insert images directory path: ")
     ext = ['png', 'jpg', 'gif']    # Add image formats here
     files = []
