@@ -19,7 +19,7 @@ Using grpc and NoSQL, you could use AI models to run them async (using asyncio) 
 * ```pip install -r ./requirements.txt```
 * download the redis json module docker file from [Here](https://uploadkon.ir/uploads/08e004_25redislabs-rejson.rar). Extract the file. open a tmux session and let's call it tmux_redis. if docker did not run because the redis is not started, initialize redis server. run these commands in tmux_redis: 1- ```docker load -i /path/to/redislabs_rejson.tar```; 2- ```docker run --name=redis-devel --publish=6379:6379 --hostname=redis --restart=on-failure --detach redislabs/rejson```
 
-* In case of using the ./model2/model_landmark_cal.proto file add the below code to the top of the "./model2/model_landmark_cal_pb2_grpc.py":
+* In case of using the ./model2/model_landmark_cal.proto file, "model_landmark_cal_pb2_grpc.py" and "model_landmark_cal_pb2.py" files will be generated. add the below code to the top of the "./model2/model_landmark_cal_pb2_grpc.py": (The files are already provided)
 ```
 import sys, os
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -29,7 +29,7 @@ for i in range(1,len(script_directory.split('/'))-1):
 sys.path.append(wanted_dir)
 ```
 
-* In case of using the ./model_1/model_landmark_cal.proto file add the below code to the top of the "./model_1/model_landmark_cal_pb22_grpc.py":
+* In case of using the ./model_1/model_landmark_cal.proto file, "model_landmark_cal_pb2_grpc.py" and "model_landmark_cal_pb2.py" files will be generated. rename the files to "model_landmark_cal_pb22_grpc.py" and "model_landmark_cal_pb22.py" respectively then add the below code to the top of the "./model_1/model_landmark_cal_pb22_grpc.py": (The files are already provided)
 ```
 import sys, os
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -39,7 +39,7 @@ for i in range(1,len(script_directory.split('/'))-1):
 sys.path.append(wanted_dir)
 ```
 
-* In case of using the ./aggregator/aggregator.proto file add the below code to the top of the "./aggregator/aggregator_pb2_grpc.py":
+* In case of using the ./aggregator/aggregator.proto file, an "aggregator_pb2_grpc.py" file will be genrated. add the below code to the top of the "./aggregator/aggregator_pb2_grpc.py" file: (The file(s) is/are provided)
 ```
 import sys, os
 script_directory = os.path.dirname(os.path.abspath(__file__))
